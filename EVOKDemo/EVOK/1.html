@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>调起APPJS代码</title>
+
+<script>
+//判断手机里面是否有该应用
+    window.location = isInstalled();
+    
+    function isInstalled(){
+        var the_href="https://itunes.apple.com/cn/app/yang-guang-fu-er-yun-fu-bi/id1032156059?mt=8 ";//获得下载链接
+       setTimeout(function(){
+            window.location="sunnymum://";//打开app
+        },50);
+        setTimeout(function(){
+            window.location=the_href;//如果超时就跳转到app下载页
+                   
+        },100);
+    }
+
+
+
+function phone(date){
+    
+    window.location.href = 'tel://' + date;
+    
+}
+
+    </script>
+</head>
+
+<body>
+    </br>
+    </br>
+    </br>
+    </br>
+    <a style="margin-top:100px" href="javascript:phone('+18911015292+')">拨打电话</a>
+    
+    <a href="https://itunes.apple.com/cn/app/yang-guang-fu-er-yun-fu-bi/id1032156059?mt=8" >启动应用程序</a>
+    <a href="sunnymum://" >启动应用程序</a>
+</body>
+</html>
